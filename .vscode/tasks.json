@@ -1,0 +1,26 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "compilar projeto",
+            "type": "shell",
+            "command": "gcc",
+            "args": [
+                "-Wall",
+                "-Wextra",
+                "-g",
+                "-mconsole", // Esta linha indica que é um aplicativo de linha de comando
+                "${workspaceFolder}/main.c",
+                "${workspaceFolder}/expressao.c",
+                "-o",
+                "${workspaceFolder}/output/main.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Compilando o projeto com main.c e expressao.c"
+        }
+    ]
+}
